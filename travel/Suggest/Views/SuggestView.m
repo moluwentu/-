@@ -52,7 +52,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.top.equalTo(@70);
+        make.top.equalTo(@60);
     }];
     
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -86,7 +86,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
             if (self.moveBlock) {
                 self.moveBlock(panTransY);
             }
-            NSLog(@"%zd",panTransY);
+//            NSLog(@"%zd",panTransY);
             CGPoint panCenter = self.center;
             panCenter.y = panTransY + self.originCenter.y;
             self.center = panCenter;
@@ -145,7 +145,6 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.text = @"精品旅行";
         _titleLabel.font = [UIFont systemFontOfSize:25];
-//        _titleLabel
     }
     return _titleLabel;
 }

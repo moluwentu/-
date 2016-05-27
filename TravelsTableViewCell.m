@@ -31,11 +31,16 @@
     [self.contentView addSubview:self.titleLabel];
     
     [self.mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.contentView);
+        make.top.equalTo(self.contentView).offset(4);
+        make.bottom.equalTo(self.contentView).offset(-4);
+        make.left.equalTo(self.contentView).offset(6);
+        make.right.equalTo(self.contentView).offset(-6);
     }];
     
     [self.coverView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.contentView);
+        make.bottom.equalTo(self.contentView).offset(-4);
+        make.left.equalTo(self.contentView).offset(6);
+        make.right.equalTo(self.contentView).offset(-6);
         make.height.equalTo(@(30));
     }];
     
@@ -58,6 +63,8 @@
 - (UIImageView *)mainImageView{
     if (_mainImageView == nil) {
         _mainImageView = [[UIImageView alloc]init];
+        _mainImageView.layer.cornerRadius = 3;
+        _mainImageView.clipsToBounds = YES;
 //        _mainImageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _mainImageView;
@@ -76,6 +83,8 @@
         _coverView = [[UIView alloc]init];
         _coverView.backgroundColor = [UIColor blackColor];
         _coverView.alpha = 0.3;
+        _coverView.layer.cornerRadius = 3;
+        _coverView.layer.masksToBounds = YES;
     }
     return _coverView;
 }

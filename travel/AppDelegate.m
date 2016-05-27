@@ -33,9 +33,9 @@
 
 - (void)setUpAppearance{
     
-    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:47.0 / 255.0 green:230.0 / 255.0 blue:246.0 / 255.0 alpha:1];
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:44.0 / 255.0 green:199.0 / 255.0 blue:225.0 / 255.0 alpha:1];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
-    [UITabBar appearance].tintColor = [UIColor colorWithRed:47.0 / 255.0 green:230.0 / 255.0 blue:246.0 / 255.0 alpha:1];
+    [UITabBar appearance].tintColor = [UIColor colorWithRed:44.0 / 255.0 green:186.0 / 255.0 blue:225.0 / 255.0 alpha:1];
 }
 
 - (void)setNetWork{

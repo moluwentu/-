@@ -35,10 +35,9 @@
     NSArray *icons = @[[UIImage imageNamed:@"亚洲"], [UIImage imageNamed:@"欧洲"], [UIImage imageNamed:@"北美"], [UIImage imageNamed:@"南美"], [UIImage imageNamed:@"大洋洲"], [UIImage imageNamed:@"非洲"]];
     CHPopUpMenu *popMenu = [[CHPopUpMenu alloc]initWithFrame:CGRectMake(kScreenWidth / 2 + 15, kScreenHeight * 2 / 3 - 40, 200, 200) direction:-M_PI iconArray:icons];
     popMenu.travelBlock = ^(UIButton *travleView){
-        NSLog(@"%ld",(long)travleView.tag);
+//        NSLog(@"%ld",(long)travleView.tag);
         switch (travleView.tag) {
             case 0:
-//                self.travelImageView.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"亚.jpg"].CGImage);
                 [self.travelImageView setImage:[UIImage imageNamed:@"亚.jpg"]];
                 break;
             case 1:

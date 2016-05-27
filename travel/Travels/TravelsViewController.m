@@ -32,7 +32,9 @@ static NSString *travelsTableViewCellID = @"travelsTableViewCellID";
     [self.view addSubview:self.mainTableView];
     
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+//        make.edges.equalTo(self.view);
+        make.top.equalTo(self.view).offset(3);
+        make.left.right.bottom.equalTo(self.view);
     }];
 }
 
