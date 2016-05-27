@@ -1,0 +1,38 @@
+//
+//  HelpToolsPrefix.pch
+//  基础框架
+//
+//  Created by 叶慧伟 on 16/3/31.
+//  Copyright © 2016年 叶慧伟. All rights reserved.
+//
+
+#ifndef HelpToolsPrefix_pch
+#define HelpToolsPrefix_pch
+
+#import "CateGoryHeader.h"
+#import "NetWorkTools.h"
+#import <Masonry.h>
+
+//自定义输出宏
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+//RGB创建颜色
+#define RGB(r, g, b) ([UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1.0])
+//创建随机颜色
+#define RandomColor (RGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256)))
+
+//适配iphone
+#define isIphone4 [UIScreen mainScreen].bounds.size.height == 480
+#define isIphone5 [UIScreen mainScreen].bounds.size.height == 568
+#define isIphone6 [UIScreen mainScreen].bounds.size.height == 667
+#define isIphone6P [UIScreen mainScreen].bounds.size.height == 736
+
+//屏幕
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#endif /* HelpToolsPrefix_pch */

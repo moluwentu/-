@@ -7,13 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33DE98BA3CEA5672BD602F4D /* libPods-travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AEBA1223802CA68BD38302 /* libPods-travel.a */; };
 		6336C0CF1CF57DC700A93EA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0CE1CF57DC700A93EA5 /* main.m */; };
 		6336C0D21CF57DC700A93EA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0D11CF57DC700A93EA5 /* AppDelegate.m */; };
-		6336C0D51CF57DC700A93EA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0D41CF57DC700A93EA5 /* ViewController.m */; };
 		6336C0D81CF57DC700A93EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6336C0D61CF57DC700A93EA5 /* Main.storyboard */; };
-		6336C0DA1CF57DC700A93EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6336C0D91CF57DC700A93EA5 /* Assets.xcassets */; };
 		6336C0DD1CF57DC700A93EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6336C0DB1CF57DC700A93EA5 /* LaunchScreen.storyboard */; };
 		6336C0E81CF57DC800A93EA5 /* travelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0E71CF57DC800A93EA5 /* travelUITests.m */; };
+		6336C1091CF57E8000A93EA5 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0F91CF57E8000A93EA5 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6336C10A1CF57E8000A93EA5 /* NSString+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0FB1CF57E8000A93EA5 /* NSString+Identifier.m */; };
+		6336C10B1CF57E8000A93EA5 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0FD1CF57E8000A93EA5 /* UIButton+Extension.m */; };
+		6336C10C1CF57E8000A93EA5 /* UIButton+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0FF1CF57E8000A93EA5 /* UIButton+Repeat.m */; };
+		6336C10D1CF57E8000A93EA5 /* UIGestureRecognizer+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1011CF57E8000A93EA5 /* UIGestureRecognizer+block.m */; };
+		6336C10E1CF57E8000A93EA5 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1031CF57E8000A93EA5 /* UIImage+Compress.m */; };
+		6336C10F1CF57E8000A93EA5 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1051CF57E8000A93EA5 /* UILabel+Extension.m */; };
+		6336C1101CF57E8000A93EA5 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1081CF57E8000A93EA5 /* NetWorkTools.m */; };
+		6336C1141CF5816E00A93EA5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1131CF5816E00A93EA5 /* MainViewController.m */; };
+		6336C1191CF584C500A93EA5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1181CF584C500A93EA5 /* BaseViewController.m */; };
+		6336C1211CF5853B00A93EA5 /* SuggestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1201CF5853B00A93EA5 /* SuggestViewController.m */; };
+		6336C12A1CF5856A00A93EA5 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C1291CF5856A00A93EA5 /* MineViewController.m */; };
+		6336C12E1CF5983A00A93EA5 /* SuggestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C12D1CF5983A00A93EA5 /* SuggestView.m */; };
+		634FE7331CF7ED8F00582079 /* CHPopUpMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7321CF7ED8F00582079 /* CHPopUpMenu.m */; };
+		634FE73D1CF7ED9500582079 /* CHAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7361CF7ED9500582079 /* CHAnimation.m */; };
+		634FE73E1CF7ED9500582079 /* CHAnimationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7381CF7ED9500582079 /* CHAnimationState.m */; };
+		634FE73F1CF7ED9500582079 /* CHAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE73A1CF7ED9500582079 /* CHAnimator.m */; };
+		634FE7461CF7EE2500582079 /* TravelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7451CF7EE2500582079 /* TravelsViewController.m */; };
+		634FE7491CF7EE4700582079 /* TourismViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7481CF7EE4700582079 /* TourismViewController.m */; };
+		634FE74B1CF7F7B600582079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634FE74A1CF7F7B600582079 /* Assets.xcassets */; };
+		639B67EA1CF6F2A700C20E16 /* TravelsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */; };
+		F9A4BD774AB67342629A4978 /* libPods-travelUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78014A52D7042C91E0348F8D /* libPods-travelUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +48,65 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43AEBA1223802CA68BD38302 /* libPods-travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0BB614EC6A87D507762DD9 /* Pods-travelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-travelUITests/Pods-travelUITests.release.xcconfig"; sourceTree = "<group>"; };
+		57BEDF3288883AAD977E2644 /* Pods-travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travel/Pods-travel.debug.xcconfig"; sourceTree = "<group>"; };
 		6336C0CA1CF57DC700A93EA5 /* travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6336C0CE1CF57DC700A93EA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6336C0D01CF57DC700A93EA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6336C0D11CF57DC700A93EA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6336C0D31CF57DC700A93EA5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6336C0D41CF57DC700A93EA5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6336C0D71CF57DC700A93EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6336C0D91CF57DC700A93EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6336C0DC1CF57DC700A93EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6336C0DE1CF57DC700A93EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6336C0E31CF57DC800A93EA5 /* travelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = travelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6336C0E71CF57DC800A93EA5 /* travelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = travelUITests.m; sourceTree = "<group>"; };
 		6336C0E91CF57DC800A93EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6336C0F71CF57E8000A93EA5 /* CateGoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateGoryHeader.h; sourceTree = "<group>"; };
+		6336C0F81CF57E8000A93EA5 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		6336C0F91CF57E8000A93EA5 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		6336C0FA1CF57E8000A93EA5 /* NSString+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Identifier.h"; sourceTree = "<group>"; };
+		6336C0FB1CF57E8000A93EA5 /* NSString+Identifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Identifier.m"; sourceTree = "<group>"; };
+		6336C0FC1CF57E8000A93EA5 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		6336C0FD1CF57E8000A93EA5 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		6336C0FE1CF57E8000A93EA5 /* UIButton+Repeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Repeat.h"; sourceTree = "<group>"; };
+		6336C0FF1CF57E8000A93EA5 /* UIButton+Repeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Repeat.m"; sourceTree = "<group>"; };
+		6336C1001CF57E8000A93EA5 /* UIGestureRecognizer+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+block.h"; sourceTree = "<group>"; };
+		6336C1011CF57E8000A93EA5 /* UIGestureRecognizer+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+block.m"; sourceTree = "<group>"; };
+		6336C1021CF57E8000A93EA5 /* UIImage+Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compress.h"; sourceTree = "<group>"; };
+		6336C1031CF57E8000A93EA5 /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
+		6336C1041CF57E8000A93EA5 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		6336C1051CF57E8000A93EA5 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		6336C1071CF57E8000A93EA5 /* NetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTools.h; sourceTree = "<group>"; };
+		6336C1081CF57E8000A93EA5 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
+		6336C1111CF5800E00A93EA5 /* HelpToolsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpToolsPrefix.pch; sourceTree = "<group>"; };
+		6336C1121CF5816E00A93EA5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6336C1131CF5816E00A93EA5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6336C1171CF584C500A93EA5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6336C1181CF584C500A93EA5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		6336C11F1CF5853B00A93EA5 /* SuggestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestViewController.h; sourceTree = "<group>"; };
+		6336C1201CF5853B00A93EA5 /* SuggestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestViewController.m; sourceTree = "<group>"; };
+		6336C1281CF5856A00A93EA5 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		6336C1291CF5856A00A93EA5 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		6336C12C1CF5983A00A93EA5 /* SuggestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestView.h; sourceTree = "<group>"; };
+		6336C12D1CF5983A00A93EA5 /* SuggestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestView.m; sourceTree = "<group>"; };
+		634FE7311CF7ED8F00582079 /* CHPopUpMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPopUpMenu.h; sourceTree = "<group>"; };
+		634FE7321CF7ED8F00582079 /* CHPopUpMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPopUpMenu.m; sourceTree = "<group>"; };
+		634FE7351CF7ED9500582079 /* CHAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAnimation.h; sourceTree = "<group>"; };
+		634FE7361CF7ED9500582079 /* CHAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAnimation.m; sourceTree = "<group>"; };
+		634FE7371CF7ED9500582079 /* CHAnimationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAnimationState.h; sourceTree = "<group>"; };
+		634FE7381CF7ED9500582079 /* CHAnimationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAnimationState.m; sourceTree = "<group>"; };
+		634FE7391CF7ED9500582079 /* CHAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAnimator.h; sourceTree = "<group>"; };
+		634FE73A1CF7ED9500582079 /* CHAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAnimator.m; sourceTree = "<group>"; };
+		634FE7441CF7EE2500582079 /* TravelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TravelsViewController.h; path = travel/Travels/TravelsViewController.h; sourceTree = SOURCE_ROOT; };
+		634FE7451CF7EE2500582079 /* TravelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TravelsViewController.m; path = travel/Travels/TravelsViewController.m; sourceTree = SOURCE_ROOT; };
+		634FE7471CF7EE4700582079 /* TourismViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismViewController.h; sourceTree = "<group>"; };
+		634FE7481CF7EE4700582079 /* TourismViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismViewController.m; sourceTree = "<group>"; };
+		634FE74A1CF7F7B600582079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		639B67E81CF6F2A700C20E16 /* TravelsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelsTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		761558A4B48F8F23016216BF /* Pods-travelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travelUITests/Pods-travelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		78014A52D7042C91E0348F8D /* libPods-travelUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travelUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5EEE5D4D6C9ADCBE715D0F /* Pods-travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-travel/Pods-travel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DE98BA3CEA5672BD602F4D /* libPods-travel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A4BD774AB67342629A4978 /* libPods-travelUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +135,8 @@
 				6336C0CC1CF57DC700A93EA5 /* travel */,
 				6336C0E61CF57DC800A93EA5 /* travelUITests */,
 				6336C0CB1CF57DC700A93EA5 /* Products */,
+				F21685112D0DDBC43E70EE2E /* Pods */,
+				C40FBC506275D86AFC2EADDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +152,19 @@
 		6336C0CC1CF57DC700A93EA5 /* travel */ = {
 			isa = PBXGroup;
 			children = (
+				6336C0F51CF57E8000A93EA5 /* Tools */,
+				6336C0F21CF57E6700A93EA5 /* Main */,
+				6336C0F31CF57E6700A93EA5 /* Mine */,
+				6336C11D1CF5852500A93EA5 /* Suggest */,
+				6336C11E1CF5852500A93EA5 /* Tourism */,
+				6336C0F41CF57E6700A93EA5 /* Travels */,
 				6336C0D01CF57DC700A93EA5 /* AppDelegate.h */,
 				6336C0D11CF57DC700A93EA5 /* AppDelegate.m */,
-				6336C0D31CF57DC700A93EA5 /* ViewController.h */,
-				6336C0D41CF57DC700A93EA5 /* ViewController.m */,
+				6336C1111CF5800E00A93EA5 /* HelpToolsPrefix.pch */,
 				6336C0D61CF57DC700A93EA5 /* Main.storyboard */,
-				6336C0D91CF57DC700A93EA5 /* Assets.xcassets */,
 				6336C0DB1CF57DC700A93EA5 /* LaunchScreen.storyboard */,
 				6336C0DE1CF57DC700A93EA5 /* Info.plist */,
+				634FE74A1CF7F7B600582079 /* Assets.xcassets */,
 				6336C0CD1CF57DC700A93EA5 /* Supporting Files */,
 			);
 			path = travel;
@@ -111,6 +187,158 @@
 			path = travelUITests;
 			sourceTree = "<group>";
 		};
+		6336C0F21CF57E6700A93EA5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6336C1121CF5816E00A93EA5 /* MainViewController.h */,
+				6336C1131CF5816E00A93EA5 /* MainViewController.m */,
+				6336C1171CF584C500A93EA5 /* BaseViewController.h */,
+				6336C1181CF584C500A93EA5 /* BaseViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6336C0F31CF57E6700A93EA5 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				6336C1281CF5856A00A93EA5 /* MineViewController.h */,
+				6336C1291CF5856A00A93EA5 /* MineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		6336C0F41CF57E6700A93EA5 /* Travels */ = {
+			isa = PBXGroup;
+			children = (
+				634FE7441CF7EE2500582079 /* TravelsViewController.h */,
+				634FE7451CF7EE2500582079 /* TravelsViewController.m */,
+				639B67E71CF6F29200C20E16 /* Views */,
+			);
+			name = Travels;
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		6336C0F51CF57E8000A93EA5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6336C0F61CF57E8000A93EA5 /* CategoryTools */,
+				6336C1061CF57E8000A93EA5 /* NetWorkTools */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6336C0F61CF57E8000A93EA5 /* CategoryTools */ = {
+			isa = PBXGroup;
+			children = (
+				6336C0F71CF57E8000A93EA5 /* CateGoryHeader.h */,
+				6336C0F81CF57E8000A93EA5 /* KeychainItemWrapper.h */,
+				6336C0F91CF57E8000A93EA5 /* KeychainItemWrapper.m */,
+				6336C0FA1CF57E8000A93EA5 /* NSString+Identifier.h */,
+				6336C0FB1CF57E8000A93EA5 /* NSString+Identifier.m */,
+				6336C0FC1CF57E8000A93EA5 /* UIButton+Extension.h */,
+				6336C0FD1CF57E8000A93EA5 /* UIButton+Extension.m */,
+				6336C0FE1CF57E8000A93EA5 /* UIButton+Repeat.h */,
+				6336C0FF1CF57E8000A93EA5 /* UIButton+Repeat.m */,
+				6336C1001CF57E8000A93EA5 /* UIGestureRecognizer+block.h */,
+				6336C1011CF57E8000A93EA5 /* UIGestureRecognizer+block.m */,
+				6336C1021CF57E8000A93EA5 /* UIImage+Compress.h */,
+				6336C1031CF57E8000A93EA5 /* UIImage+Compress.m */,
+				6336C1041CF57E8000A93EA5 /* UILabel+Extension.h */,
+				6336C1051CF57E8000A93EA5 /* UILabel+Extension.m */,
+			);
+			path = CategoryTools;
+			sourceTree = "<group>";
+		};
+		6336C1061CF57E8000A93EA5 /* NetWorkTools */ = {
+			isa = PBXGroup;
+			children = (
+				6336C1071CF57E8000A93EA5 /* NetWorkTools.h */,
+				6336C1081CF57E8000A93EA5 /* NetWorkTools.m */,
+			);
+			path = NetWorkTools;
+			sourceTree = "<group>";
+		};
+		6336C11D1CF5852500A93EA5 /* Suggest */ = {
+			isa = PBXGroup;
+			children = (
+				6336C12B1CF5981200A93EA5 /* Views */,
+				6336C11F1CF5853B00A93EA5 /* SuggestViewController.h */,
+				6336C1201CF5853B00A93EA5 /* SuggestViewController.m */,
+			);
+			path = Suggest;
+			sourceTree = "<group>";
+		};
+		6336C11E1CF5852500A93EA5 /* Tourism */ = {
+			isa = PBXGroup;
+			children = (
+				634FE7161CF7DDFF00582079 /* Views */,
+				634FE7471CF7EE4700582079 /* TourismViewController.h */,
+				634FE7481CF7EE4700582079 /* TourismViewController.m */,
+			);
+			path = Tourism;
+			sourceTree = "<group>";
+		};
+		6336C12B1CF5981200A93EA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6336C12C1CF5983A00A93EA5 /* SuggestView.h */,
+				6336C12D1CF5983A00A93EA5 /* SuggestView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		634FE7161CF7DDFF00582079 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				634FE7341CF7ED9500582079 /* CHAnimation */,
+				634FE7311CF7ED8F00582079 /* CHPopUpMenu.h */,
+				634FE7321CF7ED8F00582079 /* CHPopUpMenu.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		634FE7341CF7ED9500582079 /* CHAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				634FE7351CF7ED9500582079 /* CHAnimation.h */,
+				634FE7361CF7ED9500582079 /* CHAnimation.m */,
+				634FE7371CF7ED9500582079 /* CHAnimationState.h */,
+				634FE7381CF7ED9500582079 /* CHAnimationState.m */,
+				634FE7391CF7ED9500582079 /* CHAnimator.h */,
+				634FE73A1CF7ED9500582079 /* CHAnimator.m */,
+			);
+			path = CHAnimation;
+			sourceTree = "<group>";
+		};
+		639B67E71CF6F29200C20E16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				639B67E81CF6F2A700C20E16 /* TravelsTableViewCell.h */,
+				639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C40FBC506275D86AFC2EADDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43AEBA1223802CA68BD38302 /* libPods-travel.a */,
+				78014A52D7042C91E0348F8D /* libPods-travelUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F21685112D0DDBC43E70EE2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57BEDF3288883AAD977E2644 /* Pods-travel.debug.xcconfig */,
+				BA5EEE5D4D6C9ADCBE715D0F /* Pods-travel.release.xcconfig */,
+				761558A4B48F8F23016216BF /* Pods-travelUITests.debug.xcconfig */,
+				4C0BB614EC6A87D507762DD9 /* Pods-travelUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +346,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6336C0EC1CF57DC800A93EA5 /* Build configuration list for PBXNativeTarget "travel" */;
 			buildPhases = (
+				821F764D4EFCCE21F612F4B2 /* 📦 Check Pods Manifest.lock */,
 				6336C0C61CF57DC700A93EA5 /* Sources */,
 				6336C0C71CF57DC700A93EA5 /* Frameworks */,
 				6336C0C81CF57DC700A93EA5 /* Resources */,
+				585C05284BDD80F6951F83DF /* 📦 Embed Pods Frameworks */,
+				116822FC9AF7A29266D9F1F4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +366,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6336C0EF1CF57DC800A93EA5 /* Build configuration list for PBXNativeTarget "travelUITests" */;
 			buildPhases = (
+				FC7852B4ABDEA9479EFCC579 /* 📦 Check Pods Manifest.lock */,
 				6336C0DF1CF57DC800A93EA5 /* Sources */,
 				6336C0E01CF57DC800A93EA5 /* Frameworks */,
 				6336C0E11CF57DC800A93EA5 /* Resources */,
+				3DD6D275D96C5C5D4DF9FE95 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,7 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6336C0DD1CF57DC700A93EA5 /* LaunchScreen.storyboard in Resources */,
-				6336C0DA1CF57DC700A93EA5 /* Assets.xcassets in Resources */,
+				634FE74B1CF7F7B600582079 /* Assets.xcassets in Resources */,
 				6336C0D81CF57DC700A93EA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,14 +439,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		116822FC9AF7A29266D9F1F4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-travel/Pods-travel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DD6D275D96C5C5D4DF9FE95 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-travelUITests/Pods-travelUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		585C05284BDD80F6951F83DF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-travel/Pods-travel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		821F764D4EFCCE21F612F4B2 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7852B4ABDEA9479EFCC579 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6336C0C61CF57DC700A93EA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6336C0D51CF57DC700A93EA5 /* ViewController.m in Sources */,
+				6336C10A1CF57E8000A93EA5 /* NSString+Identifier.m in Sources */,
+				6336C1101CF57E8000A93EA5 /* NetWorkTools.m in Sources */,
+				639B67EA1CF6F2A700C20E16 /* TravelsTableViewCell.m in Sources */,
+				6336C10D1CF57E8000A93EA5 /* UIGestureRecognizer+block.m in Sources */,
+				6336C10B1CF57E8000A93EA5 /* UIButton+Extension.m in Sources */,
+				6336C1091CF57E8000A93EA5 /* KeychainItemWrapper.m in Sources */,
+				6336C10E1CF57E8000A93EA5 /* UIImage+Compress.m in Sources */,
+				634FE73F1CF7ED9500582079 /* CHAnimator.m in Sources */,
+				6336C10C1CF57E8000A93EA5 /* UIButton+Repeat.m in Sources */,
+				6336C1211CF5853B00A93EA5 /* SuggestViewController.m in Sources */,
+				6336C1141CF5816E00A93EA5 /* MainViewController.m in Sources */,
+				6336C12A1CF5856A00A93EA5 /* MineViewController.m in Sources */,
+				634FE7331CF7ED8F00582079 /* CHPopUpMenu.m in Sources */,
+				6336C1191CF584C500A93EA5 /* BaseViewController.m in Sources */,
+				634FE7461CF7EE2500582079 /* TravelsViewController.m in Sources */,
 				6336C0D21CF57DC700A93EA5 /* AppDelegate.m in Sources */,
+				634FE7491CF7EE4700582079 /* TourismViewController.m in Sources */,
+				6336C10F1CF57E8000A93EA5 /* UILabel+Extension.m in Sources */,
 				6336C0CF1CF57DC700A93EA5 /* main.m in Sources */,
+				634FE73E1CF7ED9500582079 /* CHAnimationState.m in Sources */,
+				6336C12E1CF5983A00A93EA5 /* SuggestView.m in Sources */,
+				634FE73D1CF7ED9500582079 /* CHAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +671,10 @@
 		};
 		6336C0ED1CF57DC800A93EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57BEDF3288883AAD977E2644 /* Pods-travel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/travel/HelpToolsPrefix.pch";
 				INFOPLIST_FILE = travel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--yefucker.travel";
@@ -352,8 +684,10 @@
 		};
 		6336C0EE1CF57DC800A93EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA5EEE5D4D6C9ADCBE715D0F /* Pods-travel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/travel/HelpToolsPrefix.pch";
 				INFOPLIST_FILE = travel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--yefucker.travel";
@@ -363,6 +697,7 @@
 		};
 		6336C0F01CF57DC800A93EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 761558A4B48F8F23016216BF /* Pods-travelUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = travelUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +709,7 @@
 		};
 		6336C0F11CF57DC800A93EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C0BB614EC6A87D507762DD9 /* Pods-travelUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = travelUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +738,7 @@
 				6336C0EE1CF57DC800A93EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6336C0EF1CF57DC800A93EA5 /* Build configuration list for PBXNativeTarget "travelUITests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +747,7 @@
 				6336C0F11CF57DC800A93EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import <AFNetworkActivityIndicatorManager.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +19,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setNetWork];
+    [self setUpAppearance];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [MainViewController new];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (void)setUpAppearance{
+    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:47.0 / 255.0 green:230.0 / 255.0 blue:246.0 / 255.0 alpha:1];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [UITabBar appearance].tintColor = [UIColor colorWithRed:47.0 / 255.0 green:230.0 / 255.0 blue:246.0 / 255.0 alpha:1];
+}
+
+- (void)setNetWork{
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    //设置缓存
+    NSURLCache *cache = [[NSURLCache alloc]initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:cache];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
