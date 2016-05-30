@@ -200,7 +200,7 @@
     
 }
 
-- (CGFloat) angleForIcon:(int)iconNumber numberOfIcons:(int)nIcons {
+- (CGFloat) angleForIcon:(int)iconNumber numberOfIcons:(NSUInteger)nIcons {
     CGFloat interSpace = M_PI_4;
     CGFloat totalAngle = (nIcons -1) * interSpace;
     CGFloat startAngle = _direction - totalAngle/2;

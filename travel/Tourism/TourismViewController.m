@@ -73,6 +73,7 @@
 - (UIImageView *)travelImageView{
     if (_travelImageView == nil) {
         _travelImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight * 2 / 3 - 30)];
+         [_travelImageView setImage:[UIImage imageNamed:@"亚.jpg"]];
         _travelImageView.backgroundColor = [UIColor clearColor];
         CGSize finalSize = _travelImageView.frame.size;
         CGFloat layerHeight = 90;
