@@ -50,6 +50,13 @@
         __weak typeof(self) weakself = self;
         _suggestView.moveBlock = ^(CGFloat offsetY){
             CGRect backImageRect = weakself.backImageView.frame;
+            
+//            if (weakself.suggestView.frame.origin.y < 500) {
+//                CGRect topFrame = weakself.suggestView.frame;
+//                topFrame.origin.y = 0;
+//                weakself.suggestView.frame = topFrame;
+//            }
+            
             if (fabs(offsetY) > 80) {
                 return ;
             }

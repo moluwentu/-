@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong)UIImageView *travelImageView;
 @property (nonatomic, strong)UIImageView *bottomImageView;
+@property (nonatomic, strong)UIImageView *leftImageView;
 
 @end
 
@@ -27,6 +28,7 @@
 - (void)setUI{
     [self.navigationController setNavigationBarHidden:YES];
 //    [self.view addSubview:self.bottomImageView];
+//    [self.view addSubview:self.leftImageView];
     [self.view addSubview:self.travelImageView];
     [self setSuggest];
 }
@@ -97,6 +99,27 @@
         [_bottomImageView setImage:[UIImage imageNamed:@"bottomImage"]];
     }
     return _bottomImageView;
+}
+
+- (UIImageView *)leftImageView{
+    if (_leftImageView == nil) {
+        _leftImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        [_leftImageView setImage:[UIImage imageNamed:@"beach.jpg"]];
+        
+//        CGSize finalSize = _leftImageView.frame.size;
+//        CGFloat layerHeight = 90;
+//        CAShapeLayer *layer = [CAShapeLayer layer];
+//        UIBezierPath *path = [UIBezierPath bezierPath];
+//        
+//        [path moveToPoint:CGPointMake(kScreenWidth / 2 - 45, kScreenHeight - 44)];
+//        [path addLineToPoint:CGPointMake(kScreenWidth, kScreenHeight - 44)];
+//        [path addLineToPoint:CGPointMake(kScreenWidth, kScreenHeight / 2)];
+//        [path addQuadCurveToPoint:CGPointMake(kScreenWidth / 2 - 45,kScreenHeight - 44) controlPoint:CGPointMake(kScreenWidth * 1 / 2 - 35, kScreenHeight / 2 + 68)];
+//        layer.path = path.CGPath;
+//        layer.fillColor = [UIColor whiteColor].CGColor;
+//        [_leftImageView.layer addSublayer:layer];
+    }
+    return _leftImageView;
 }
 
 - (void)didReceiveMemoryWarning {
