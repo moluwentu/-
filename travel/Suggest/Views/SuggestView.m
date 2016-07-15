@@ -27,7 +27,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
 @implementation SuggestView
 
 - (instancetype)initWithFrame:(CGRect)frame{
-    if (self == [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         
         self.titleArr = @[@"欧洲古堡游", @"亲近自然的旅行", @"乐园游"];
@@ -134,6 +134,12 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
     cell.imageStr = self.imageArr[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.pushBlock) {
+        self.pushBlock(indexPath);
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

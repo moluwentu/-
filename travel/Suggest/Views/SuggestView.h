@@ -11,5 +11,6 @@
 @interface SuggestView : UIView
 
 @property (nonatomic, copy)void(^moveBlock)(CGFloat offetY);
+@property (nonatomic, copy)void(^pushBlock)(NSIndexPath *index);
 
 @end

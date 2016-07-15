@@ -7,47 +7,45 @@
 //
 
 #import "TravelsViewController.h"
-#import "TravelsTableViewCell.h"
+#import "TranvelAnimaCell.h"
+#import <MJRefresh.h>
 
-static NSString *travelsTableViewCellID = @"travelsTableViewCellID";
+static NSString *TranvelAnimaCellID = @"TranvelAnimaCellID";
 
-@interface TravelsViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface TravelsViewController ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong)UITableView *mainTableView;
 @property (nonatomic, strong)NSArray *titleDataArr;
 @property (nonatomic, strong)NSArray *imageDataArr;
+@property (nonatomic, strong)MJRefreshNormalHeader *headerFresh;
 
 @end
 
 @implementation TravelsViewController
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self scrollViewDidScroll:[UIScrollView new]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController setNavigationBarHidden:YES];
     [self getData];
     [self setUI];
 }
 
 - (void)setUI{
+    self.mainTableView.mj_header = self.headerFresh;
+    
     [self.view addSubview:self.mainTableView];
     
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.edges.equalTo(self.view);
-        make.top.equalTo(self.view).offset(3);
+        make.top.equalTo(self.view).offset(-20);
         make.left.right.bottom.equalTo(self.view);
     }];
-}
-
-- (void)tabViewMove:(UIPanGestureRecognizer *)ges{
-    switch (ges.state) {
-        case UIGestureRecognizerStateBegan:{
-//            CGPoint starPoint = [ges locationInView:self.view];
-        }
-            break;
-            
-        default:
-            break;
-    }
 }
 
 - (void)getData{
@@ -55,33 +53,45 @@ static NSString *travelsTableViewCellID = @"travelsTableViewCellID";
     self.imageDataArr = @[@"youji1.jpg", @"youji2.jpg", @"youji3.jpg", @"youji4.jpg", @"youji5.jpg", @"youji6.jpg"];
 }
 
+- (void)refreashData{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.mainTableView.mj_header endRefreshingWithCompletionBlock:^{
+             NSLog(@"hehe");
+        }];
+    });
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.titleDataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TravelsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:travelsTableViewCellID forIndexPath:indexPath];
+    TranvelAnimaCell *cell = [tableView dequeueReusableCellWithIdentifier:TranvelAnimaCellID forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.imageStr = self.imageDataArr[indexPath.item];
     cell.titleStr = self.titleDataArr[indexPath.item];
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 180;
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//获取可视视图
+    NSArray *visCells = [self.mainTableView visibleCells];
+    
+    for (TranvelAnimaCell *cell in visCells) {
+        [cell cellOnTable:self.mainTableView didScrollow:self.view];
+    }
 }
 
 - (UITableView *)mainTableView{
     if (_mainTableView == nil) {
         _mainTableView = [[UITableView alloc]init];
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_mainTableView registerClass:[TravelsTableViewCell class] forCellReuseIdentifier:travelsTableViewCellID];
+        [_mainTableView registerClass:[TranvelAnimaCell class] forCellReuseIdentifier:TranvelAnimaCellID];
         _mainTableView.showsVerticalScrollIndicator = NO;
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
-        
-//        UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(tabViewMove:)];
-//        [_mainTableView addGestureRecognizer:ges];
+        _mainTableView.rowHeight = 200;
         
     }
     return _mainTableView;
@@ -99,6 +109,18 @@ static NSString *travelsTableViewCellID = @"travelsTableViewCellID";
         _imageDataArr = [NSArray array];
     }
     return _imageDataArr;
+}
+
+- (MJRefreshNormalHeader *)headerFresh{
+    if (_headerFresh == nil) {
+        _headerFresh = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreashData)];
+        _headerFresh.lastUpdatedTimeLabel.hidden = YES;
+        [_headerFresh setTitle:@"下拉加载" forState:MJRefreshStateIdle];
+        [_headerFresh setTitle:@"松开加载~" forState:MJRefreshStatePulling];
+        [_headerFresh setTitle:@"加载中 ..." forState:MJRefreshStateRefreshing];
+        [_headerFresh setTitle:@"加载完成" forState:MJRefreshStateWillRefresh];
+    }
+    return _headerFresh;
 }
 
 - (void)didReceiveMemoryWarning {

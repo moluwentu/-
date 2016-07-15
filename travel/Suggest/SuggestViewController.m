@@ -8,6 +8,7 @@
 
 #import "SuggestViewController.h"
 #import "SuggestView.h"
+#import "SuggestDetailVC.h"
 
 @interface SuggestViewController ()
 
@@ -63,6 +64,13 @@
             backImageRect = CGRectMake(weakself.originRect.origin.x + offsetY / 10, weakself.originRect.origin.y + offsetY / 10, weakself.originRect.size.width - offsetY / 5, weakself.originRect.size.height - offsetY / 5);
             weakself.backImageView.frame = backImageRect;
         };
+        //tableview点击
+        _suggestView.pushBlock = ^(NSIndexPath *indexpath){
+            SuggestDetailVC *sugVC = [[SuggestDetailVC alloc]init];
+            
+            [weakself.navigationController pushViewController:sugVC animated:YES];
+        };
+        
     }
     return _suggestView;
 }

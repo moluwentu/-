@@ -1,14 +1,14 @@
 //
-//  TravelsTableViewCell.m
+//  TranvelAnimaCell.m
 //  travel
 //
-//  Created by 叶慧伟 on 16/5/26.
+//  Created by 叶慧伟 on 16/7/15.
 //  Copyright © 2016年 叶慧伟. All rights reserved.
 //
 
-#import "TravelsTableViewCell.h"
+#import "TranvelAnimaCell.h"
 
-@interface TravelsTableViewCell()
+@interface TranvelAnimaCell()
 
 @property (nonatomic, strong)UIImageView *mainImageView;
 @property (nonatomic, strong)UILabel *titleLabel;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation TravelsTableViewCell
+@implementation TranvelAnimaCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -26,21 +26,20 @@
 }
 
 - (void)setUI{
+    self.clipsToBounds = YES;
+    
     [self.contentView addSubview:self.mainImageView];
     [self.contentView addSubview:self.coverView];
     [self.contentView addSubview:self.titleLabel];
     
     [self.mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView).offset(4);
-        make.bottom.equalTo(self.contentView).offset(-4);
-        make.left.equalTo(self.contentView).offset(6);
-        make.right.equalTo(self.contentView).offset(-6);
+        make.left.right.equalTo(self);
+        make.top.equalTo(self).offset(-20);
+        make.bottom.equalTo(self).offset(40);
     }];
     
     [self.coverView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.contentView).offset(-4);
-        make.left.equalTo(self.contentView).offset(6);
-        make.right.equalTo(self.contentView).offset(-6);
+        make.bottom.left.right.equalTo(self);
         make.height.equalTo(@(30));
     }];
     
@@ -48,6 +47,23 @@
         make.left.equalTo(self.coverView).offset(8);
         make.centerY.equalTo(self.coverView);
     }];
+
+}
+
+- (void)cellOnTable:(UITableView *)tableView didScrollow:(UIView *)view{
+    CGRect rect = [tableView convertRect:self.frame toView:view];
+    float distanceCenter = CGRectGetHeight(view.frame) / 2 - CGRectGetMinY(rect);
+    float difference = CGRectGetHeight(self.mainImageView.frame) - CGRectGetHeight(self.frame);
+    float imageMove = (distanceCenter / CGRectGetHeight(view.frame)) * difference;
+    CGRect orignRect = self.mainImageView.frame;
+    orignRect.origin.y = imageMove - (difference / 2);
+    self.mainImageView.frame = orignRect;
+}
+
+#pragma mark --setter
+- (void)setImageStr:(NSString *)imageStr{
+    _imageStr = imageStr;
+    [self.mainImageView setImage:[UIImage imageNamed:imageStr]];
 }
 
 - (void)setTitleStr:(NSString *)titleStr{
@@ -55,17 +71,10 @@
     self.titleLabel.text = titleStr;
 }
 
-- (void)setImageStr:(NSString *)imageStr{
-    _imageStr = imageStr;
-    [self.mainImageView setImage:[UIImage imageNamed:imageStr]];
-}
-
+#pragma mark --lazyload
 - (UIImageView *)mainImageView{
     if (_mainImageView == nil) {
         _mainImageView = [[UIImageView alloc]init];
-        _mainImageView.layer.cornerRadius = 3;
-        _mainImageView.clipsToBounds = YES;
-//        _mainImageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _mainImageView;
 }
@@ -83,16 +92,9 @@
         _coverView = [[UIView alloc]init];
         _coverView.backgroundColor = [UIColor blackColor];
         _coverView.alpha = 0.3;
-        _coverView.layer.cornerRadius = 3;
-        _coverView.layer.masksToBounds = YES;
     }
     return _coverView;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

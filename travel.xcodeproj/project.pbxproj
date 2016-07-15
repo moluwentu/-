@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		33DE98BA3CEA5672BD602F4D /* libPods-travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AEBA1223802CA68BD38302 /* libPods-travel.a */; };
+		6300E5D11D38885C00768B94 /* TranvelAnimaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300E5D01D38885C00768B94 /* TranvelAnimaCell.m */; };
+		6309DC481D2B950900AC2DBD /* SuggestDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309DC471D2B950900AC2DBD /* SuggestDetailVC.m */; };
 		6336C0CF1CF57DC700A93EA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0CE1CF57DC700A93EA5 /* main.m */; };
 		6336C0D21CF57DC700A93EA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0D11CF57DC700A93EA5 /* AppDelegate.m */; };
 		6336C0D81CF57DC700A93EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6336C0D61CF57DC700A93EA5 /* Main.storyboard */; };
@@ -53,6 +55,10 @@
 		43AEBA1223802CA68BD38302 /* libPods-travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0BB614EC6A87D507762DD9 /* Pods-travelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-travelUITests/Pods-travelUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57BEDF3288883AAD977E2644 /* Pods-travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travel/Pods-travel.debug.xcconfig"; sourceTree = "<group>"; };
+		6300E5CF1D38885C00768B94 /* TranvelAnimaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranvelAnimaCell.h; sourceTree = SOURCE_ROOT; };
+		6300E5D01D38885C00768B94 /* TranvelAnimaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranvelAnimaCell.m; sourceTree = SOURCE_ROOT; };
+		6309DC461D2B950900AC2DBD /* SuggestDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestDetailVC.h; sourceTree = "<group>"; };
+		6309DC471D2B950900AC2DBD /* SuggestDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestDetailVC.m; sourceTree = "<group>"; };
 		6336C0CA1CF57DC700A93EA5 /* travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6336C0CE1CF57DC700A93EA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6336C0D01CF57DC700A93EA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6309DC451D2B94F400AC2DBD /* suggestDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6309DC461D2B950900AC2DBD /* SuggestDetailVC.h */,
+				6309DC471D2B950900AC2DBD /* SuggestDetailVC.m */,
+			);
+			path = suggestDetail;
+			sourceTree = "<group>";
+		};
 		6336C0C11CF57DC700A93EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +283,7 @@
 		6336C11D1CF5852500A93EA5 /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
+				6309DC451D2B94F400AC2DBD /* suggestDetail */,
 				6336C12B1CF5981200A93EA5 /* Views */,
 				6336C11F1CF5853B00A93EA5 /* SuggestViewController.h */,
 				6336C1201CF5853B00A93EA5 /* SuggestViewController.m */,
@@ -288,6 +304,8 @@
 		6336C12B1CF5981200A93EA5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				639B67E81CF6F2A700C20E16 /* TravelsTableViewCell.h */,
+				639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */,
 				6336C12C1CF5983A00A93EA5 /* SuggestView.h */,
 				6336C12D1CF5983A00A93EA5 /* SuggestView.m */,
 			);
@@ -331,8 +349,8 @@
 		639B67E71CF6F29200C20E16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				639B67E81CF6F2A700C20E16 /* TravelsTableViewCell.h */,
-				639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */,
+				6300E5CF1D38885C00768B94 /* TranvelAnimaCell.h */,
+				6300E5D01D38885C00768B94 /* TranvelAnimaCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -549,6 +567,7 @@
 				636C8F601CFC0F11002C9485 /* DetailTableViewCell.m in Sources */,
 				6336C10E1CF57E8000A93EA5 /* UIImage+Compress.m in Sources */,
 				634FE73F1CF7ED9500582079 /* CHAnimator.m in Sources */,
+				6300E5D11D38885C00768B94 /* TranvelAnimaCell.m in Sources */,
 				6336C10C1CF57E8000A93EA5 /* UIButton+Repeat.m in Sources */,
 				6336C1211CF5853B00A93EA5 /* SuggestViewController.m in Sources */,
 				6336C1141CF5816E00A93EA5 /* MainViewController.m in Sources */,
@@ -557,6 +576,7 @@
 				6336C1191CF584C500A93EA5 /* BaseViewController.m in Sources */,
 				634FE7461CF7EE2500582079 /* TravelsViewController.m in Sources */,
 				6336C0D21CF57DC700A93EA5 /* AppDelegate.m in Sources */,
+				6309DC481D2B950900AC2DBD /* SuggestDetailVC.m in Sources */,
 				634FE7491CF7EE4700582079 /* TourismViewController.m in Sources */,
 				636C8F5D1CFC085C002C9485 /* HeaderTableViewCell.m in Sources */,
 				6336C10F1CF57E8000A93EA5 /* UILabel+Extension.m in Sources */,
