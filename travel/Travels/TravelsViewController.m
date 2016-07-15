@@ -49,8 +49,8 @@ static NSString *TranvelAnimaCellID = @"TranvelAnimaCellID";
 }
 
 - (void)getData{
-    self.titleDataArr = @[@"拉斯维加斯-鸡尾酒虾",@"澳洲大龙虾",@"日本水豆腐",@"沙爹",@"和果子",@"奥地利市中电车"];
-    self.imageDataArr = @[@"youji1.jpg", @"youji2.jpg", @"youji3.jpg", @"youji4.jpg", @"youji5.jpg", @"youji6.jpg"];
+    self.titleDataArr = @[@"拉斯维加斯-鸡尾酒虾",@"澳洲大龙虾",@"心的方向",@"日本水豆腐",@"沙爹",@"和果子",@"奥地利市中电车"];
+    self.imageDataArr = @[@"youji1.jpg", @"youji2.jpg",@"youji7.jpg", @"youji3.jpg", @"youji4.jpg", @"youji5.jpg", @"youji6.jpg"];
 }
 
 - (void)refreashData{
