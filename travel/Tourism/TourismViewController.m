@@ -61,6 +61,7 @@
                 break;
         }
         
+        //增加简单的转场动画
         CATransition *ca = [CATransition animation];
         ca.type = @"fade";
         ca.subtype = kCATransitionFromRight;
@@ -77,6 +78,7 @@
         _travelImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight * 2 / 3 - 30)];
          [_travelImageView setImage:[UIImage imageNamed:@"亚.jpg"]];
         _travelImageView.backgroundColor = [UIColor clearColor];
+        //给上方图片画弧
         CGSize finalSize = _travelImageView.frame.size;
         CGFloat layerHeight = 90;
         CAShapeLayer *layer = [CAShapeLayer layer];
@@ -105,19 +107,6 @@
     if (_leftImageView == nil) {
         _leftImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
         [_leftImageView setImage:[UIImage imageNamed:@"beach.jpg"]];
-        
-//        CGSize finalSize = _leftImageView.frame.size;
-//        CGFloat layerHeight = 90;
-//        CAShapeLayer *layer = [CAShapeLayer layer];
-//        UIBezierPath *path = [UIBezierPath bezierPath];
-//        
-//        [path moveToPoint:CGPointMake(kScreenWidth / 2 - 45, kScreenHeight - 44)];
-//        [path addLineToPoint:CGPointMake(kScreenWidth, kScreenHeight - 44)];
-//        [path addLineToPoint:CGPointMake(kScreenWidth, kScreenHeight / 2)];
-//        [path addQuadCurveToPoint:CGPointMake(kScreenWidth / 2 - 45,kScreenHeight - 44) controlPoint:CGPointMake(kScreenWidth * 1 / 2 - 35, kScreenHeight / 2 + 68)];
-//        layer.path = path.CGPath;
-//        layer.fillColor = [UIColor whiteColor].CGColor;
-//        [_leftImageView.layer addSublayer:layer];
     }
     return _leftImageView;
 }

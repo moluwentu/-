@@ -75,9 +75,9 @@ static NSString *TranvelAnimaCellID = @"TranvelAnimaCellID";
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//获取可视视图
+    //获取可视视图
     NSArray *visCells = [self.mainTableView visibleCells];
-    
+    //调用修改imageframe的方法
     for (TranvelAnimaCell *cell in visCells) {
         [cell cellOnTable:self.mainTableView didScrollow:self.view];
     }

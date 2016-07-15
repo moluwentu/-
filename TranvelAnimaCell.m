@@ -51,9 +51,13 @@
 }
 
 - (void)cellOnTable:(UITableView *)tableView didScrollow:(UIView *)view{
+    //修改image的frame
     CGRect rect = [tableView convertRect:self.frame toView:view];
+    //图片离屏幕中心的差距
     float distanceCenter = CGRectGetHeight(view.frame) / 2 - CGRectGetMinY(rect);
+    //获取图片超出的部分
     float difference = CGRectGetHeight(self.mainImageView.frame) - CGRectGetHeight(self.frame);
+    //移动图片
     float imageMove = (distanceCenter / CGRectGetHeight(view.frame)) * difference;
     CGRect orignRect = self.mainImageView.frame;
     orignRect.origin.y = imageMove - (difference / 2);

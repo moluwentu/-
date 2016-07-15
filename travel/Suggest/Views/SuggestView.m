@@ -73,6 +73,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
     }];
 }
 
+//首页菜单的拖动
 - (void)panned:(UIPanGestureRecognizer *)panGes{
     
     switch (panGes.state) {
@@ -107,7 +108,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
         }];
     }
 }
-
+//绘制弧线
 - (void)setlay{
     CGSize finalSize = self.frame.size;
     CGFloat layerHeight = 70;

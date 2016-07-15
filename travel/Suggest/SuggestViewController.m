@@ -61,6 +61,7 @@
             if (fabs(offsetY) > 80) {
                 return ;
             }
+        //修改首页背景图片的frame，增加动态效果
             backImageRect = CGRectMake(weakself.originRect.origin.x + offsetY / 10, weakself.originRect.origin.y + offsetY / 10, weakself.originRect.size.width - offsetY / 5, weakself.originRect.size.height - offsetY / 5);
             weakself.backImageView.frame = backImageRect;
         };
