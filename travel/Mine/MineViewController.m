@@ -7,21 +7,36 @@
 //
 
 #import "MineViewController.h"
-#import "HeaderTableViewCell.h"
 #import "DetailTableViewCell.h"
+#import "MineHeaderView.h"
+#import "MineSortCell.h"
 
-static NSString *const HeaderTableViewCellID = @"HeaderTableViewCellID";
+static NSString *const MineSortCellID = @"MineSortCellID";
 static NSString *const DetailTableViewCellID = @"DetailTableViewCellID";
+
+#define headerHeight 220
+#define minOffetY -150
 
 @interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *mainTableView;
+@property (nonatomic, strong)MineHeaderView *headerView;
 @property (nonatomic, strong)NSArray *imageArr;
 @property (nonatomic, strong)NSArray *titleArr;
 
 @end
 
 @implementation MineViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,13 +51,12 @@ static NSString *const DetailTableViewCellID = @"DetailTableViewCellID";
 }
 
 - (void)setUI{
+    self.automaticallyAdjustsScrollViewInsets = YES;
     [self.view addSubview:self.mainTableView];
-    
-    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+    [self.mainTableView addSubview:self.headerView];
 }
 
+#pragma mark -- delegate --
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
@@ -50,23 +64,14 @@ static NSString *const DetailTableViewCellID = @"DetailTableViewCellID";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
-    }else{
-        return self.imageArr.count;
     }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if (section == 0) {
-        return 20;
-    }else{
-        return 0;
-    }
+    return self.imageArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        HeaderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HeaderTableViewCellID forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        MineSortCell *cell = [tableView dequeueReusableCellWithIdentifier:MineSortCellID forIndexPath:indexPath];
+         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else{
         DetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DetailTableViewCellID forIndexPath:indexPath];
@@ -80,18 +85,20 @@ static NSString *const DetailTableViewCellID = @"DetailTableViewCellID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 104;
+        return 87;
     }else{
-        return 47;
+        return 50;
     }
 }
 
+#pragma mark --lazyload--
 - (UITableView *)mainTableView{
     if (_mainTableView == nil) {
-        _mainTableView = [[UITableView alloc]init];
+        _mainTableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+        _mainTableView.contentInset = UIEdgeInsetsMake(headerHeight, 0, 0, 0);
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_mainTableView registerClass:[HeaderTableViewCell class] forCellReuseIdentifier:HeaderTableViewCellID];
         [_mainTableView registerClass:[DetailTableViewCell class] forCellReuseIdentifier:DetailTableViewCellID];
+        [_mainTableView registerClass:[MineSortCell class] forCellReuseIdentifier:MineSortCellID];
         _mainTableView.showsVerticalScrollIndicator = NO;
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
@@ -100,6 +107,32 @@ static NSString *const DetailTableViewCellID = @"DetailTableViewCellID";
     return _mainTableView;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    CGFloat offsetX = (offsetY + headerHeight) / 2;
+//    NSLog(@"%f",offsetY);
+    if (offsetY < -headerHeight) {
+        CGRect rect = self.headerView.frame;
+        rect.origin.y = offsetY;
+        rect.size.height = -offsetY;
+        rect.origin.x = offsetX;
+        rect.size.width = [UIScreen mainScreen].bounds.size.width + fabs(offsetX) * 2;
+        self.headerView.frame = rect;
+    }else if(offsetY > -headerHeight && offsetY <minOffetY){
+        CGRect rect = self.headerView.frame;
+        rect.origin.y = offsetY;
+        rect.size.height = -offsetY;
+        self.headerView.frame = rect;
+    }
+}
+
+#pragma mark -- lazyload --
+- (MineHeaderView *)headerView{
+    if (_headerView == nil) {
+        _headerView = [[MineHeaderView alloc]initWithFrame:CGRectMake(0, -headerHeight, [UIScreen mainScreen].bounds.size.width, headerHeight)];
+    }
+    return _headerView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

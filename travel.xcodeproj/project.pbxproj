@@ -10,6 +10,9 @@
 		33DE98BA3CEA5672BD602F4D /* libPods-travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AEBA1223802CA68BD38302 /* libPods-travel.a */; };
 		6300E5D11D38885C00768B94 /* TranvelAnimaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300E5D01D38885C00768B94 /* TranvelAnimaCell.m */; };
 		6309DC481D2B950900AC2DBD /* SuggestDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309DC471D2B950900AC2DBD /* SuggestDetailVC.m */; };
+		631009A01D59B1390092A95C /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6310099F1D59B1390092A95C /* MineHeaderView.m */; };
+		631009A31D59C2D00092A95C /* MineSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 631009A21D59C2D00092A95C /* MineSortCell.m */; };
+		631009A61D59C48A0092A95C /* SortCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 631009A51D59C48A0092A95C /* SortCollectionCell.m */; };
 		6336C0CF1CF57DC700A93EA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0CE1CF57DC700A93EA5 /* main.m */; };
 		6336C0D21CF57DC700A93EA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0D11CF57DC700A93EA5 /* AppDelegate.m */; };
 		6336C0D81CF57DC700A93EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6336C0D61CF57DC700A93EA5 /* Main.storyboard */; };
@@ -35,7 +38,6 @@
 		634FE7461CF7EE2500582079 /* TravelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7451CF7EE2500582079 /* TravelsViewController.m */; };
 		634FE7491CF7EE4700582079 /* TourismViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7481CF7EE4700582079 /* TourismViewController.m */; };
 		634FE74B1CF7F7B600582079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634FE74A1CF7F7B600582079 /* Assets.xcassets */; };
-		636C8F5D1CFC085C002C9485 /* HeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 636C8F5C1CFC085C002C9485 /* HeaderTableViewCell.m */; };
 		636C8F601CFC0F11002C9485 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 636C8F5F1CFC0F11002C9485 /* DetailTableViewCell.m */; };
 		639B67EA1CF6F2A700C20E16 /* TravelsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */; };
 		F9A4BD774AB67342629A4978 /* libPods-travelUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78014A52D7042C91E0348F8D /* libPods-travelUITests.a */; };
@@ -59,6 +61,12 @@
 		6300E5D01D38885C00768B94 /* TranvelAnimaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranvelAnimaCell.m; sourceTree = SOURCE_ROOT; };
 		6309DC461D2B950900AC2DBD /* SuggestDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestDetailVC.h; sourceTree = "<group>"; };
 		6309DC471D2B950900AC2DBD /* SuggestDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestDetailVC.m; sourceTree = "<group>"; };
+		6310099E1D59B1390092A95C /* MineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
+		6310099F1D59B1390092A95C /* MineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
+		631009A11D59C2D00092A95C /* MineSortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSortCell.h; sourceTree = "<group>"; };
+		631009A21D59C2D00092A95C /* MineSortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSortCell.m; sourceTree = "<group>"; };
+		631009A41D59C48A0092A95C /* SortCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortCollectionCell.h; sourceTree = "<group>"; };
+		631009A51D59C48A0092A95C /* SortCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortCollectionCell.m; sourceTree = "<group>"; };
 		6336C0CA1CF57DC700A93EA5 /* travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6336C0CE1CF57DC700A93EA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6336C0D01CF57DC700A93EA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,8 +118,6 @@
 		634FE7471CF7EE4700582079 /* TourismViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismViewController.h; sourceTree = "<group>"; };
 		634FE7481CF7EE4700582079 /* TourismViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismViewController.m; sourceTree = "<group>"; };
 		634FE74A1CF7F7B600582079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		636C8F5B1CFC085C002C9485 /* HeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderTableViewCell.h; sourceTree = "<group>"; };
-		636C8F5C1CFC085C002C9485 /* HeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderTableViewCell.m; sourceTree = "<group>"; };
 		636C8F5E1CFC0F11002C9485 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		636C8F5F1CFC0F11002C9485 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		639B67E81CF6F2A700C20E16 /* TravelsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelsTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -338,10 +344,14 @@
 		636C8F5A1CFC084F002C9485 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				636C8F5B1CFC085C002C9485 /* HeaderTableViewCell.h */,
-				636C8F5C1CFC085C002C9485 /* HeaderTableViewCell.m */,
 				636C8F5E1CFC0F11002C9485 /* DetailTableViewCell.h */,
 				636C8F5F1CFC0F11002C9485 /* DetailTableViewCell.m */,
+				6310099E1D59B1390092A95C /* MineHeaderView.h */,
+				6310099F1D59B1390092A95C /* MineHeaderView.m */,
+				631009A11D59C2D00092A95C /* MineSortCell.h */,
+				631009A21D59C2D00092A95C /* MineSortCell.m */,
+				631009A41D59C48A0092A95C /* SortCollectionCell.h */,
+				631009A51D59C48A0092A95C /* SortCollectionCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -561,12 +571,15 @@
 				6336C10A1CF57E8000A93EA5 /* NSString+Identifier.m in Sources */,
 				6336C1101CF57E8000A93EA5 /* NetWorkTools.m in Sources */,
 				639B67EA1CF6F2A700C20E16 /* TravelsTableViewCell.m in Sources */,
+				631009A61D59C48A0092A95C /* SortCollectionCell.m in Sources */,
 				6336C10D1CF57E8000A93EA5 /* UIGestureRecognizer+block.m in Sources */,
 				6336C10B1CF57E8000A93EA5 /* UIButton+Extension.m in Sources */,
+				631009A01D59B1390092A95C /* MineHeaderView.m in Sources */,
 				6336C1091CF57E8000A93EA5 /* KeychainItemWrapper.m in Sources */,
 				636C8F601CFC0F11002C9485 /* DetailTableViewCell.m in Sources */,
 				6336C10E1CF57E8000A93EA5 /* UIImage+Compress.m in Sources */,
 				634FE73F1CF7ED9500582079 /* CHAnimator.m in Sources */,
+				631009A31D59C2D00092A95C /* MineSortCell.m in Sources */,
 				6300E5D11D38885C00768B94 /* TranvelAnimaCell.m in Sources */,
 				6336C10C1CF57E8000A93EA5 /* UIButton+Repeat.m in Sources */,
 				6336C1211CF5853B00A93EA5 /* SuggestViewController.m in Sources */,
@@ -578,7 +591,6 @@
 				6336C0D21CF57DC700A93EA5 /* AppDelegate.m in Sources */,
 				6309DC481D2B950900AC2DBD /* SuggestDetailVC.m in Sources */,
 				634FE7491CF7EE4700582079 /* TourismViewController.m in Sources */,
-				636C8F5D1CFC085C002C9485 /* HeaderTableViewCell.m in Sources */,
 				6336C10F1CF57E8000A93EA5 /* UILabel+Extension.m in Sources */,
 				6336C0CF1CF57DC700A93EA5 /* main.m in Sources */,
 				634FE73E1CF7ED9500582079 /* CHAnimationState.m in Sources */,
