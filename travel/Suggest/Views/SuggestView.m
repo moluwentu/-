@@ -9,6 +9,8 @@
 #import "SuggestView.h"
 #import "TravelsTableViewCell.h"
 
+#define rowHeight 180
+
 static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
 
 @interface SuggestView ()<UITableViewDelegate,UITableViewDataSource>
@@ -30,8 +32,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         
-        self.titleArr = @[@"欧洲古堡游", @"亲近自然的旅行", @"乐园游"];
-        self.imageArr = @[@"推荐1.jpg",@"推荐2.jpg",@"推荐3.jpg"];
+        [self setData];
         
         self.originFrame = frame;
         self.userInteractionEnabled = YES;
@@ -42,6 +43,13 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
         [self setUI];
     }
     return self;
+}
+
+- (void)setTitleArr:(NSArray *)titleArr{
+    _titleArr = titleArr;
+    CGRect originRect = self.frame;
+    originRect.size.height = titleArr.count * rowHeight + 145;
+    self.frame = originRect;
 }
 
 - (void)setUI{
@@ -73,6 +81,12 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
     }];
 }
 
+- (void)setData{
+    self.titleArr = @[@"欧洲古堡游", @"亲近自然的旅行", @"乐园游"];
+    self.imageArr = @[@"推荐1.jpg",@"推荐2.jpg",@"推荐3.jpg"];
+}
+    
+
 //首页菜单的拖动
 - (void)panned:(UIPanGestureRecognizer *)panGes{
     
@@ -87,10 +101,13 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
             if (self.moveBlock) {
                 self.moveBlock(panTransY);
             }
-//            NSLog(@"%zd",panTransY);
             CGPoint panCenter = self.center;
             panCenter.y = panTransY + self.originCenter.y;
+            if (panCenter.y < self.frame.size.height / 2) {
+                panCenter.y = self.frame.size.height / 2 + 5;
+            }
             self.center = panCenter;
+           
         }
             
         case UIGestureRecognizerStateEnded:{
@@ -144,7 +161,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 180;
+    return rowHeight;
 }
 
 - (UILabel *)titleLabel{

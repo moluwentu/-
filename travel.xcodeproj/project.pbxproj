@@ -40,6 +40,7 @@
 		634FE74B1CF7F7B600582079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634FE74A1CF7F7B600582079 /* Assets.xcassets */; };
 		636C8F601CFC0F11002C9485 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 636C8F5F1CFC0F11002C9485 /* DetailTableViewCell.m */; };
 		639B67EA1CF6F2A700C20E16 /* TravelsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */; };
+		63AEA44B1D5DA4BB001AF14B /* TravleMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AEA44A1D5DA4BB001AF14B /* TravleMapVC.m */; };
 		F9A4BD774AB67342629A4978 /* libPods-travelUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78014A52D7042C91E0348F8D /* libPods-travelUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,8 @@
 		636C8F5F1CFC0F11002C9485 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		639B67E81CF6F2A700C20E16 /* TravelsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelsTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		639B67E91CF6F2A700C20E16 /* TravelsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		63AEA4491D5DA4BB001AF14B /* TravleMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravleMapVC.h; sourceTree = "<group>"; };
+		63AEA44A1D5DA4BB001AF14B /* TravleMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravleMapVC.m; sourceTree = "<group>"; };
 		761558A4B48F8F23016216BF /* Pods-travelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travelUITests/Pods-travelUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		78014A52D7042C91E0348F8D /* libPods-travelUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travelUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5EEE5D4D6C9ADCBE715D0F /* Pods-travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-travel/Pods-travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +231,7 @@
 		6336C0F31CF57E6700A93EA5 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				63AEA4481D5DA49E001AF14B /* XTMapView */,
 				636C8F5A1CFC084F002C9485 /* Views */,
 				6336C1281CF5856A00A93EA5 /* MineViewController.h */,
 				6336C1291CF5856A00A93EA5 /* MineViewController.m */,
@@ -363,6 +367,15 @@
 				6300E5D01D38885C00768B94 /* TranvelAnimaCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		63AEA4481D5DA49E001AF14B /* XTMapView */ = {
+			isa = PBXGroup;
+			children = (
+				63AEA4491D5DA4BB001AF14B /* TravleMapVC.h */,
+				63AEA44A1D5DA4BB001AF14B /* TravleMapVC.m */,
+			);
+			path = XTMapView;
 			sourceTree = "<group>";
 		};
 		C40FBC506275D86AFC2EADDC /* Frameworks */ = {
@@ -570,6 +583,7 @@
 			files = (
 				6336C10A1CF57E8000A93EA5 /* NSString+Identifier.m in Sources */,
 				6336C1101CF57E8000A93EA5 /* NetWorkTools.m in Sources */,
+				63AEA44B1D5DA4BB001AF14B /* TravleMapVC.m in Sources */,
 				639B67EA1CF6F2A700C20E16 /* TravelsTableViewCell.m in Sources */,
 				631009A61D59C48A0092A95C /* SortCollectionCell.m in Sources */,
 				6336C10D1CF57E8000A93EA5 /* UIGestureRecognizer+block.m in Sources */,

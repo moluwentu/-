@@ -10,6 +10,7 @@
 #import "DetailTableViewCell.h"
 #import "MineHeaderView.h"
 #import "MineSortCell.h"
+#import "TravleMapVC.h"
 
 static NSString *const MineSortCellID = @"MineSortCellID";
 static NSString *const DetailTableViewCellID = @"DetailTableViewCellID";
@@ -88,6 +89,14 @@ static NSString *const DetailTableViewCellID = @"DetailTableViewCellID";
         return 87;
     }else{
         return 50;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        TravleMapVC *mapVC = [[TravleMapVC alloc]init];
+        mapVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:mapVC animated:YES];
     }
 }
 
