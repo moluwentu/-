@@ -3,6 +3,4 @@
 借鉴了很多效果- -随时更新
 目前完成最外一层界面
 修改了我的界面效果，添加模糊以及缩放
-<img src=http://chuantu.biz/t5/1/1464333394x3738746565.png />
-<img src=http://chuantu.biz/t5/1/1464333452x3738746565.png />
-<img src=http://chuantu.biz/t5/1/1464333469x3738746565.png />
+首页部分修改完成，初步添加MAPKIT
