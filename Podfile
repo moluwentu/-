@@ -12,6 +12,8 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'Masonry'
 pod 'MJRefresh'
+pod 'AMap2DMap'
+pod 'AMapSearch' 
   target 'travelUITests' do
     inherit! :search_paths
     # Pods for testing

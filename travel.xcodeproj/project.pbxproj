@@ -37,6 +37,19 @@
 		634FE7461CF7EE2500582079 /* TravelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7451CF7EE2500582079 /* TravelsViewController.m */; };
 		634FE7491CF7EE4700582079 /* TourismViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634FE7481CF7EE4700582079 /* TourismViewController.m */; };
 		634FE74B1CF7F7B600582079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634FE74A1CF7F7B600582079 /* Assets.xcassets */; };
+		635BB9DB1D94FB0F001FC4B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9DA1D94FB0F001FC4B8 /* UIKit.framework */; };
+		635BB9DD1D94FB19001FC4B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9DC1D94FB19001FC4B8 /* Foundation.framework */; };
+		635BB9DF1D94FB22001FC4B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9DE1D94FB22001FC4B8 /* CoreGraphics.framework */; };
+		635BB9E11D94FB2B001FC4B8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9E01D94FB2B001FC4B8 /* QuartzCore.framework */; };
+		635BB9E31D94FB33001FC4B8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9E21D94FB33001FC4B8 /* OpenGLES.framework */; };
+		635BB9E51D94FB4C001FC4B8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9E41D94FB4C001FC4B8 /* CoreLocation.framework */; };
+		635BB9E71D94FB54001FC4B8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9E61D94FB54001FC4B8 /* CoreTelephony.framework */; };
+		635BB9E91D94FB5A001FC4B8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9E81D94FB5A001FC4B8 /* SystemConfiguration.framework */; };
+		635BB9EB1D94FB6B001FC4B8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9EA1D94FB6B001FC4B8 /* libz.tbd */; };
+		635BB9ED1D94FB75001FC4B8 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9EC1D94FB75001FC4B8 /* libstdc++.6.0.9.tbd */; };
+		635BB9EF1D94FB7C001FC4B8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9EE1D94FB7C001FC4B8 /* libc++.tbd */; };
+		635BB9F11D94FB84001FC4B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9F01D94FB84001FC4B8 /* Security.framework */; };
+		635BB9F31D94FB94001FC4B8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635BB9F21D94FB94001FC4B8 /* AdSupport.framework */; };
 		636C8F601CFC0F11002C9485 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 636C8F5F1CFC0F11002C9485 /* DetailTableViewCell.m */; };
 		63AEA44B1D5DA4BB001AF14B /* TravleMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AEA44A1D5DA4BB001AF14B /* TravleMapVC.m */; };
 		63B724BB1D795AB20076B1D2 /* TravelsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B724BA1D795AB20076B1D2 /* TravelsTableViewCell.m */; };
@@ -117,6 +130,19 @@
 		634FE7471CF7EE4700582079 /* TourismViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismViewController.h; sourceTree = "<group>"; };
 		634FE7481CF7EE4700582079 /* TourismViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismViewController.m; sourceTree = "<group>"; };
 		634FE74A1CF7F7B600582079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		635BB9DA1D94FB0F001FC4B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		635BB9DC1D94FB19001FC4B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		635BB9DE1D94FB22001FC4B8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		635BB9E01D94FB2B001FC4B8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		635BB9E21D94FB33001FC4B8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		635BB9E41D94FB4C001FC4B8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		635BB9E61D94FB54001FC4B8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		635BB9E81D94FB5A001FC4B8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		635BB9EA1D94FB6B001FC4B8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		635BB9EC1D94FB75001FC4B8 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		635BB9EE1D94FB7C001FC4B8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		635BB9F01D94FB84001FC4B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		635BB9F21D94FB94001FC4B8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		636C8F5E1CFC0F11002C9485 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		636C8F5F1CFC0F11002C9485 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		63AEA4491D5DA4BB001AF14B /* TravleMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravleMapVC.h; sourceTree = "<group>"; };
@@ -135,6 +161,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635BB9F31D94FB94001FC4B8 /* AdSupport.framework in Frameworks */,
+				635BB9F11D94FB84001FC4B8 /* Security.framework in Frameworks */,
+				635BB9EF1D94FB7C001FC4B8 /* libc++.tbd in Frameworks */,
+				635BB9ED1D94FB75001FC4B8 /* libstdc++.6.0.9.tbd in Frameworks */,
+				635BB9EB1D94FB6B001FC4B8 /* libz.tbd in Frameworks */,
+				635BB9E91D94FB5A001FC4B8 /* SystemConfiguration.framework in Frameworks */,
+				635BB9E71D94FB54001FC4B8 /* CoreTelephony.framework in Frameworks */,
+				635BB9E51D94FB4C001FC4B8 /* CoreLocation.framework in Frameworks */,
+				635BB9E31D94FB33001FC4B8 /* OpenGLES.framework in Frameworks */,
+				635BB9E11D94FB2B001FC4B8 /* QuartzCore.framework in Frameworks */,
+				635BB9DF1D94FB22001FC4B8 /* CoreGraphics.framework in Frameworks */,
+				635BB9DD1D94FB19001FC4B8 /* Foundation.framework in Frameworks */,
+				635BB9DB1D94FB0F001FC4B8 /* UIKit.framework in Frameworks */,
 				33DE98BA3CEA5672BD602F4D /* libPods-travel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +420,19 @@
 		C40FBC506275D86AFC2EADDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				635BB9F21D94FB94001FC4B8 /* AdSupport.framework */,
+				635BB9F01D94FB84001FC4B8 /* Security.framework */,
+				635BB9EE1D94FB7C001FC4B8 /* libc++.tbd */,
+				635BB9EC1D94FB75001FC4B8 /* libstdc++.6.0.9.tbd */,
+				635BB9EA1D94FB6B001FC4B8 /* libz.tbd */,
+				635BB9E81D94FB5A001FC4B8 /* SystemConfiguration.framework */,
+				635BB9E61D94FB54001FC4B8 /* CoreTelephony.framework */,
+				635BB9E41D94FB4C001FC4B8 /* CoreLocation.framework */,
+				635BB9E21D94FB33001FC4B8 /* OpenGLES.framework */,
+				635BB9E01D94FB2B001FC4B8 /* QuartzCore.framework */,
+				635BB9DE1D94FB22001FC4B8 /* CoreGraphics.framework */,
+				635BB9DC1D94FB19001FC4B8 /* Foundation.framework */,
+				635BB9DA1D94FB0F001FC4B8 /* UIKit.framework */,
 				43AEBA1223802CA68BD38302 /* libPods-travel.a */,
 				78014A52D7042C91E0348F8D /* libPods-travelUITests.a */,
 			);
@@ -452,6 +504,7 @@
 				TargetAttributes = {
 					6336C0C91CF57DC700A93EA5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2H2MUL2KDV;
 					};
 					6336C0E21CF57DC800A93EA5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -740,6 +793,7 @@
 			baseConfigurationReference = 57BEDF3288883AAD977E2644 /* Pods-travel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2H2MUL2KDV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/travel/HelpToolsPrefix.pch";
 				INFOPLIST_FILE = travel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -753,6 +807,7 @@
 			baseConfigurationReference = BA5EEE5D4D6C9ADCBE715D0F /* Pods-travel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2H2MUL2KDV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/travel/HelpToolsPrefix.pch";
 				INFOPLIST_FILE = travel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

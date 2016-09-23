@@ -7,13 +7,15 @@
 //
 
 #import "TravleMapVC.h"
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
 
-@interface TravleMapVC ()<MKMapViewDelegate>
+@interface TravleMapVC ()<MAMapViewDelegate, AMapSearchDelegate>
 
-@property (nonatomic, strong)MKMapView *mapView;
-@property (nonatomic, strong)CLLocationManager *locationMangaer;
+@property (nonatomic, strong)MAMapView *mapView;
+@property (nonatomic, strong)AMapSearchAPI *mapSearch;
+@property (nonatomic, strong)MAPointAnnotation *myAnno;
 
 @end
 
@@ -25,30 +27,100 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initMap];
+    [self initSearch];
 }
 
 - (void)initMap{
-    self.mapView = [[MKMapView alloc]initWithFrame:self.view.bounds];
-    [self.view addSubview:self.mapView];
     
+    self.mapView = [[MAMapView alloc]initWithFrame:self.view.bounds];
+    self.mapView.mapType = MAMapTypeStandard;
     self.mapView.delegate = self;
+    self.mapView.showsScale = YES;
+    self.mapView.compassOrigin = CGPointMake(self.mapView.compassOrigin.x, 68);
+    self.mapView.zoomEnabled = YES;
+    self.mapView.showsUserLocation = YES;
+    [self.mapView setUserTrackingMode:MAUserTrackingModeFollow animated:YES];
     
-    //请求定位
-    self.locationMangaer = [[CLLocationManager alloc]init];
-    if ([CLLocationManager locationServicesEnabled] || [CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [self.locationMangaer requestWhenInUseAuthorization];
-    }
-    //用户位置追踪
-    self.mapView.userTrackingMode = MKUserTrackingModeFollow;
-    //设置地图类型
-    self.mapView.mapType = MKMapTypeStandard;
+    [self.view addSubview:self.mapView];
+
+//    [self addAnnotation];
+}
+
+- (void)initSearch{
+    self.mapSearch = [[AMapSearchAPI alloc]init];
+    self.mapSearch.delegate = self;
     
-    //添加大头针
-    [self addAnnotation];
+    AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc]init];
+    request.keywords = @"商场";
+    request.city = @"上海";
+    request.requireExtension = YES;
+    
+    [self.mapSearch AMapPOIKeywordsSearch:request];
+    
 }
 
 - (void)addAnnotation{
+    MAPointAnnotation *annotatin = [[MAPointAnnotation alloc]init];
+    annotatin.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
+    annotatin.title = @"方恒国际";
+    annotatin.subtitle = @"阜通东大街6号";
+    
+    [self.mapView addAnnotation:annotatin];
+}
 
+#pragma mark --delegate--
+- (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response{
+    if (response.pois.count == 0) {
+        return;
+    }
+    
+    NSMutableArray *annos = [NSMutableArray arrayWithCapacity:response.pois.count];
+    [response.pois enumerateObjectsUsingBlock:^(AMapPOI * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+         MAPointAnnotation *annotatin = [[MAPointAnnotation alloc]init];
+        annotatin.coordinate = CLLocationCoordinate2DMake(obj.location.latitude, obj.location.longitude);
+        annotatin.title = obj.name;
+        annotatin.subtitle = obj.address;
+        [annos addObject:annotatin];
+    }];
+    [self.mapView addAnnotations:annos];
+    
+    //如果只有一个点，设置其为中心点
+    if (annos.count == 1) {
+        [self.mapView setCenterCoordinate:[annos[0] coordinate]];
+    }else{
+        [self.mapView showAnnotations:annos animated:NO];
+    }
+}
+
+- (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation{
+    if (updatingLocation) {
+        self.myAnno.coordinate = userLocation.coordinate;
+        [self.mapView addAnnotation:self.myAnno];
+    }
+}
+
+-  (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation{
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
+        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
+        MAPinAnnotationView*annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
+        if (annotationView == nil) {
+            annotationView = [[MAPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
+        }
+        annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
+        annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
+        annotationView.draggable = NO;        //设置标注可以拖动，默认为NO
+        annotationView.pinColor = MAPinAnnotationColorRed;
+        return annotationView;
+    }
+    return nil;
+}
+
+- (MAPointAnnotation *)myAnno{
+    if (nil == _myAnno) {
+        _myAnno = [[MAPointAnnotation alloc]init];
+        _myAnno.title = @"我所在的位置";
+    }
+    return _myAnno;
 }
 
 - (void)didReceiveMemoryWarning {

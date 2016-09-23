@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import <AFNetworkActivityIndicatorManager.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
+#define gaodeMapKey @"247342576fb09cd85b63a87663bc9fba"
 
 @interface AppDelegate ()
 
@@ -22,6 +25,8 @@
     [self setNetWork];
     [self setUpAppearance];
     
+    //高德地图
+    [AMapServices sharedServices].apiKey = gaodeMapKey;
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [MainViewController new];
