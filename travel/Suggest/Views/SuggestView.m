@@ -103,9 +103,16 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
             }
             CGPoint panCenter = self.center;
             panCenter.y = panTransY + self.originCenter.y;
-            if (panCenter.y < self.frame.size.height / 2) {
-                panCenter.y = self.frame.size.height / 2 + 5;
+            if (isIphone5) {
+                if (panCenter.y < self.frame.size.height / 2 - rowHeight + 20) {
+                    panCenter.y = self.frame.size.height / 2 - rowHeight + 20;
+                }
+            }else{
+                if (panCenter.y < self.frame.size.height / 2) {
+                    panCenter.y = self.frame.size.height / 2 + 5;
+                }
             }
+            
             self.center = panCenter;
            
         }

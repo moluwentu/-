@@ -57,7 +57,7 @@
 //                topFrame.origin.y = 0;
 //                weakself.suggestView.frame = topFrame;
 //            }
-            
+            NSLog(@"%f",offsetY);
             if (fabs(offsetY) > 80) {
                 return ;
             }
@@ -67,6 +67,7 @@
         };
         //tableview点击
         _suggestView.pushBlock = ^(NSIndexPath *indexpath){
+#pragma mark --TODO--推荐详情
             SuggestDetailVC *sugVC = [[SuggestDetailVC alloc]init];
             
             [weakself.navigationController pushViewController:sugVC animated:YES];

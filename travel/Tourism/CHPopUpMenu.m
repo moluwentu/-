@@ -98,6 +98,9 @@
             [self addSubview:({
                 UIButton *iconView = [[UIButton alloc]init];
                 iconView.frame = CGRectMake(self.bounds.size.width/2 - CHPpopUpMenuItemSize/2, self.bounds.size.height/2 - CHPpopUpMenuItemSize/2, CHPpopUpMenuItemSize, CHPpopUpMenuItemSize);
+                if (isIphone5) {
+                    iconView.frame = CGRectMake(self.bounds.size.width/2 - CHPpopUpMenuItemSize/2, self.bounds.size.height/2 - CHPpopUpMenuItemSize/2, CHPpopUpMenuItemSize - 10, CHPpopUpMenuItemSize - 10);
+                }
                 iconView.alpha = 0.0;
                 [_iconViews addObject:iconView];
                 iconView.tag = i;
@@ -139,7 +142,7 @@
         
         CHAnimation *push = [CHAnimation new];
         CGFloat angle = [self angleForIcon:iconNumber numberOfIcons:nIcons];
-        CGFloat radius = 85;
+        CGFloat radius = isIphone5 ? 65 : 85;
         push.beginTime = CACurrentMediaTime() + iconNumber*0.1;
         push.duration = 0.3;
         push.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2)];
@@ -182,7 +185,7 @@
         
         CHAnimation *push = [CHAnimation new];
         CGFloat angle = [self angleForIcon:iconNumber numberOfIcons:nIcons];
-        CGFloat radius = 85;
+        CGFloat radius = isIphone5 ? 65 : 85;
         push.beginTime = CACurrentMediaTime() + iconNumber*0.1;
         push.duration = 0.3;
         

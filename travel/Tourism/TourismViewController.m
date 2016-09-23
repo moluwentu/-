@@ -36,6 +36,9 @@
 - (void)setSuggest{
     NSArray *icons = @[[UIImage imageNamed:@"亚洲"], [UIImage imageNamed:@"欧洲"], [UIImage imageNamed:@"北美"], [UIImage imageNamed:@"南美"], [UIImage imageNamed:@"大洋洲"], [UIImage imageNamed:@"非洲"]];
     CHPopUpMenu *popMenu = [[CHPopUpMenu alloc]initWithFrame:CGRectMake(kScreenWidth / 2 + 15, kScreenHeight * 2 / 3 - 40, 200, 200) direction:-M_PI iconArray:icons];
+    if (isIphone5) {
+        popMenu.frame = CGRectMake(kScreenWidth / 2, kScreenHeight * 2 / 3 - 60, 200, 200);
+    }
     popMenu.travelBlock = ^(UIButton *travleView){
 //        NSLog(@"%ld",(long)travleView.tag);
         switch (travleView.tag) {
