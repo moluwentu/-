@@ -16,6 +16,7 @@
 @property (nonatomic, strong)MAMapView *mapView;
 @property (nonatomic, strong)AMapSearchAPI *mapSearch;
 @property (nonatomic, strong)MAPointAnnotation *myAnno;
+@property (nonatomic, assign)BOOL isFirstLocation;
 
 @end
 
@@ -27,7 +28,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initMap];
-    [self initSearch];
 }
 
 - (void)initMap{
@@ -47,16 +47,22 @@
 }
 
 - (void)initSearch{
+    self.isFirstLocation = YES;
+    
     self.mapSearch = [[AMapSearchAPI alloc]init];
     self.mapSearch.delegate = self;
     
-    AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc]init];
-    request.keywords = @"商场";
-    request.city = @"上海";
-    request.requireExtension = YES;
+//    AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc]init];
+//    request.keywords = @"商场";
+//    request.city = @"上海";
+//    request.requireExtension = YES;
+//    
+//    [self.mapSearch AMapPOIKeywordsSearch:request];
     
-    [self.mapSearch AMapPOIKeywordsSearch:request];
-    
+    AMapPOIAroundSearchRequest *aroundRequest = [[AMapPOIAroundSearchRequest alloc]init];
+    aroundRequest.keywords = @"商场";
+    aroundRequest.location = [AMapGeoPoint locationWithLatitude:self.mapView.userLocation.location.coordinate.latitude longitude:self.mapView.userLocation.location.coordinate.longitude];
+    [self.mapSearch AMapPOIAroundSearch:aroundRequest];
 }
 
 - (void)addAnnotation{
@@ -93,6 +99,10 @@
 }
 
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation{
+    if (!self.isFirstLocation) {
+        [self initSearch];
+    }
+    
     if (updatingLocation) {
         self.myAnno.coordinate = userLocation.coordinate;
         [self.mapView addAnnotation:self.myAnno];
