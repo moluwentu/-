@@ -32,6 +32,12 @@
 - (void)setUI{
 
     [self.view addSubview:self.backImageView];
+    
+    [_backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.width.equalTo(self.view);
+        make.height.equalTo(self.view);
+    }];
     [self.view addSubview:self.suggestView];
     
     self.originRect = self.backImageView.frame;
@@ -39,7 +45,8 @@
 
 - (UIImageView *)backImageView{
     if (_backImageView == nil) {
-        _backImageView = [[UIImageView alloc]initWithFrame:CGRectMake(-20, -20, kScreenWidth + 40, kScreenHeight + 40)];
+        //WithFrame:CGRectMake(-20, -20, kScreenWidth + 40, kScreenHeight + 40)
+        _backImageView = [[UIImageView alloc]init];
         [_backImageView setImage:[UIImage imageNamed:@"timg.jpg"]];
     }
     return _backImageView;
@@ -50,20 +57,17 @@
         _suggestView = [[SuggestView alloc]initWithFrame:CGRectMake(0, 400, kScreenWidth, 1000)];
         __weak typeof(self) weakself = self;
         _suggestView.moveBlock = ^(CGFloat offsetY){
-            CGRect backImageRect = weakself.backImageView.frame;
             
-//            if (weakself.suggestView.frame.origin.y < 500) {
-//                CGRect topFrame = weakself.suggestView.frame;
-//                topFrame.origin.y = 0;
-//                weakself.suggestView.frame = topFrame;
-//            }
-            NSLog(@"%f",offsetY);
-            if (fabs(offsetY) > 80) {
+            if (0 < (offsetY / 5)) {
                 return ;
             }
-        //修改首页背景图片的frame，增加动态效果
-            backImageRect = CGRectMake(weakself.originRect.origin.x + offsetY / 10, weakself.originRect.origin.y + offsetY / 10, weakself.originRect.size.width - offsetY / 5, weakself.originRect.size.height - offsetY / 5);
-            weakself.backImageView.frame = backImageRect;
+            
+            [weakself.backImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.center.equalTo(weakself.view);
+                make.width.equalTo(@([UIScreen mainScreen].bounds.size.width - offsetY / 5));
+                make.height.equalTo(@([UIScreen mainScreen].bounds.size.height - offsetY / 5));
+
+            }];
         };
         //tableview点击
         _suggestView.pushBlock = ^(NSIndexPath *indexpath){
