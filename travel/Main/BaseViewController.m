@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()<UINavigationBarDelegate>
+@interface BaseViewController ()
 
 @end
 
@@ -22,12 +22,12 @@
 
 - (void)setNav{
     
-    UIColor * color = [UIColor whiteColor];
-    
-    //这里我们设置的是颜色，还可以设置shadow等，具体可以参见api
-    NSDictionary * dict = [NSDictionary dictionaryWithObject:color forKey:NSForegroundColorAttributeName];
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    self.navigationController.navigationBar.titleTextAttributes = dict;
+//    UIColor * color = [UIColor whiteColor];
+//    
+//    //这里我们设置的是颜色，还可以设置shadow等，具体可以参见api
+//    NSDictionary * dict = [NSDictionary dictionaryWithObject:color forKey:NSForegroundColorAttributeName];
+////    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+//    self.navigationController.navigationBar.titleTextAttributes = dict;
 }
 
 - (void)didReceiveMemoryWarning {

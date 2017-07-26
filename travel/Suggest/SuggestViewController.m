@@ -24,9 +24,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationController.navigationBarHidden = YES;
-    
     [self setUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)setUI{
@@ -73,7 +77,6 @@
         _suggestView.pushBlock = ^(NSIndexPath *indexpath){
 #pragma mark --TODO--推荐详情
             SuggestDetailVC *sugVC = [[SuggestDetailVC alloc]init];
-            
             [weakself.navigationController pushViewController:sugVC animated:YES];
         };
         

@@ -11,6 +11,7 @@
 #import "SuggestViewController.h"
 #import "TourismViewController.h"
 #import "TravelsViewController.h"
+#import "XTNavController.h"
 
 @interface MainViewController ()
 
@@ -43,7 +44,7 @@
     vc.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    XTNavController *nav = [[XTNavController alloc]initWithRootViewController:vc];
     [self addChildViewController:nav];
 }
 

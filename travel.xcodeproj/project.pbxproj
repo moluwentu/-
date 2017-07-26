@@ -54,6 +54,7 @@
 		63AEA44B1D5DA4BB001AF14B /* TravleMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AEA44A1D5DA4BB001AF14B /* TravleMapVC.m */; };
 		63B724BB1D795AB20076B1D2 /* TravelsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B724BA1D795AB20076B1D2 /* TravelsTableViewCell.m */; };
 		63B724BE1D795AED0076B1D2 /* TranvelAnimaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B724BD1D795AED0076B1D2 /* TranvelAnimaCell.m */; };
+		6D19841A1F2882C100367999 /* XTNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1984191F2882C100367999 /* XTNavController.m */; };
 		F9A4BD774AB67342629A4978 /* libPods-travelUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78014A52D7042C91E0348F8D /* libPods-travelUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,8 @@
 		63B724BA1D795AB20076B1D2 /* TravelsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelsTableViewCell.m; sourceTree = "<group>"; };
 		63B724BC1D795AED0076B1D2 /* TranvelAnimaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TranvelAnimaCell.h; path = travel/Travels/TranvelAnimaCell.h; sourceTree = SOURCE_ROOT; };
 		63B724BD1D795AED0076B1D2 /* TranvelAnimaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TranvelAnimaCell.m; path = travel/Travels/TranvelAnimaCell.m; sourceTree = SOURCE_ROOT; };
+		6D1984181F2882C100367999 /* XTNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTNavController.h; sourceTree = "<group>"; };
+		6D1984191F2882C100367999 /* XTNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTNavController.m; sourceTree = "<group>"; };
 		761558A4B48F8F23016216BF /* Pods-travelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travelUITests/Pods-travelUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		78014A52D7042C91E0348F8D /* libPods-travelUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travelUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5EEE5D4D6C9ADCBE715D0F /* Pods-travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-travel/Pods-travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				6336C1131CF5816E00A93EA5 /* MainViewController.m */,
 				6336C1171CF584C500A93EA5 /* BaseViewController.h */,
 				6336C1181CF584C500A93EA5 /* BaseViewController.m */,
+				6D1984181F2882C100367999 /* XTNavController.h */,
+				6D1984191F2882C100367999 /* XTNavController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 				6336C10F1CF57E8000A93EA5 /* UILabel+Extension.m in Sources */,
 				6336C0CF1CF57DC700A93EA5 /* main.m in Sources */,
 				634FE73E1CF7ED9500582079 /* CHAnimationState.m in Sources */,
+				6D19841A1F2882C100367999 /* XTNavController.m in Sources */,
 				6336C12E1CF5983A00A93EA5 /* SuggestView.m in Sources */,
 				634FE73D1CF7ED9500582079 /* CHAnimation.m in Sources */,
 			);
