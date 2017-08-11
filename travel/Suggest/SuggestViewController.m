@@ -61,7 +61,7 @@
         _suggestView = [[SuggestView alloc]initWithFrame:CGRectMake(0, 400, kScreenWidth, 1000)];
         __weak typeof(self) weakself = self;
         _suggestView.moveBlock = ^(CGFloat offsetY){
-            
+            NSLog(@"%f",offsetY);
             if (0 < (offsetY / 5)) {
                 return ;
             }

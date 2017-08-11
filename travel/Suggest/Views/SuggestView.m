@@ -109,7 +109,7 @@ static NSString *const travelsTableViewCellID = @"travelsTableViewCellID";
                 }
             }else{
                 if (panCenter.y < self.frame.size.height / 2) {
-                    panCenter.y = self.frame.size.height / 2 + 5;
+                    panCenter.y = self.frame.size.height / 2 - 55;
                 }
             }
             
