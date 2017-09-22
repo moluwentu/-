@@ -37,6 +37,11 @@ static NSString *TranvelAnimaCellID = @"TranvelAnimaCellID";
 }
 
 - (void)setUI{
+    
+    if (@available(iOS 11.0, *)) {
+        self.mainTableView.contentInset = UIEdgeInsetsMake(-24, 0, 0, 0);
+    }
+    
     self.mainTableView.mj_header = self.headerFresh;
     
     [self.view addSubview:self.mainTableView];
